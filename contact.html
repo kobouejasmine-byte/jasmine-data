@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Portfolio</title>
+  <style>
+    /* Style global */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: #1a1a1a;
+      overflow-x: hidden;
+    }
+
+    /* Canvas arrière-plan */
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* En-tête (repris de l'accueil) */
+    header {
+      width: 100%;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.8);
+      box-shadow: 0 2px 10px rgba(0,255,255,0.3);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    header h2 {
+      color: #00ffff;
+      margin: 0;
+    }
+
+    header nav a {
+      margin-left: 20px;
+      color: #e0e0e0;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #00ffff;
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    /* Section Contact */
+    .contact-section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 120px 40px 40px; /* espace sous l'en-tête */
+    }
+
+    .contact-container {
+      display: flex;
+      gap: 30px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    /* Colonnes blanches */
+    .contact-info-block,
+    .contact-form-block {
+      flex: 1;
+      background: #fff;
+      color: #000;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    }
+
+    .contact-info-block h1 {
+      font-size: 1.8rem;
+      color: #00cccc;
+      margin-bottom: 15px;
+    }
+
+    .contact-info-block p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .contact-info a {
+      color: #00cccc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Formulaire */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      background: #00cccc;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #009999;
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- En-tête -->
+  <header>
+    <h2>Mon Portfolio</h2>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="projects.html">Projets</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Section Contact -->
+  <section class="contact-section">
+    <div class="contact-container">
+      
+      <!-- Bloc gauche (infos) -->
+      <div class="contact-info-block">
+        <h1>Contactez-moi</h1>
+        <p>
+          Vous souhaitez échanger sur un projet, une collaboration ou une opportunité professionnelle ?  
+          N’hésitez pas à me contacter via les coordonnées ci-dessous.
+        </p>
+        <div class="contact-info">
+          <p>📧 <a href="mailto:votre.kobouejasmine@gmail.com">votre.kobouejasmine@gmail.com</a></p>
+          <p>📞 <a href="tel:+2250758147309">00225 07 58 14 73 09</a></p>
+          <p>🔗 <a href="https://www.linkedin.com" target="_blank">Profil LinkedIn</a></p>
+        </div>
+      </div>
+
+      <!-- Bloc droit (formulaire) -->
+      <div class="contact-form-block">
+        <form class="contact-form">
+          <input type="text" placeholder="Nom complet" required>
+          <input type="email" placeholder="Adresse e-mail" required>
+          <textarea placeholder="Votre message..." required></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Script Canvas -->
+  <script>
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+    const particleCount = 150;
+
+    for(let i=0;i<particleCount;i++){
+      particles.push({
+        x: Math.random()*canvas.width,
+        y: Math.random()*canvas.height,
+        radius: Math.random()*3+1,
+        dx:(Math.random()-0.5)*1.5,
+        dy:(Math.random()-0.5)*1.5
+      });
+    }
+
+    function animate(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+
+      for(let i=0;i<particles.length;i++){
+        let p = particles[i];
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.radius,0,Math.PI*2);
+        ctx.fillStyle='rgba(0,255,255,0.7)';
+        ctx.fill();
+
+        for(let j=i+1;j<particles.length;j++){
+          let p2 = particles[j];
+          let dist = Math.hypot(p.x-p2.x, p.y-p2.y);
+          if(dist<120){
+            ctx.beginPath();
+            ctx.moveTo(p.x,p.y);
+            ctx.lineTo(p2.x,p2.y);
+            ctx.strokeStyle = `rgba(0,255,255,${1-dist/120})`;
+            ctx.lineWidth=1;
+            ctx.stroke();
+          }
+        }
+
+        p.x+=p.dx; p.y+=p.dy;
+        if(p.x<0||p.x>canvas.width)p.dx*=-1;
+        if(p.y<0||p.y>canvas.height)p.dy*=-1;
+      }
+
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    window.addEventListener('resize',()=>{
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>
