@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Canvas plein écran */
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    header {
+      background: rgba(0,0,0,0.6);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul li a.active {
+      text-decoration: underline;
+    }
+
+    .apropos {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .titre {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Nouvelle disposition en 2 colonnes */
+    .apropos-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .intro {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Bouton Voir mes projets */
+    .btn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn-projets {
+      display: inline-block;
+      padding: 12px 25px;
+      background: rgba(0,255,255,0.7);
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-projets:hover {
+      background: rgba(0,255,255,1);
+      transform: scale(1.05);
+    }
+
+    .grid-apropos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .social-icons img {
+      width: 28px;
+      margin: 0 8px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html" class="active">À propos</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="visualisation.html">Visualisation</a></li>
+        <li><a href="certificats.html">Certificats</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="apropos">
+    <h1 class="titre">À propos de moi</h1>
+
+    <div class="apropos-container">
+      <!-- Colonne gauche -->
+      <div>
+        <p class="intro">
+          <strong>🌐 Bienvenue dans mon univers Data</strong><br>
+          <p>Je suis <strong>Orsimandji Koboue Jasmine Daniella</strong>, statisticienne et data scientist passionnée par les chiffres et leur pouvoir d’explication.</p>
+
+<p>Grâce à mes compétences en <strong>statistique</strong>, <strong>analyse de données</strong>, <strong>machine learning</strong>, <strong>visualisation de données</strong> et <strong>développement d’applications no-code</strong>, je transforme les données en insights concrets pour éclairer les décisions stratégiques.</p>
+
+<p>Mon objectif : rendre les données accessibles et exploitables afin de créer de la valeur et accompagner les entreprises dans leur transformation.</p>
+
+        </p>
+        <!-- Bouton ajouté centré -->
+        <div class="btn-container">
+          <a href="projets.html" class="btn-projets">Voir mes projets</a>
+        </div>
+      </div>
+
+      <!-- Colonne droite : 6 cadrans -->
+      <div class="grid-apropos">
+        <div class="card">
+          <h2>🌱 Analyses Descriptives & Économétriques</h2>
+          <p>Expertise en analyses descriptives et économétriques pour dégager des tendances et fournir des insights fiables.</p>
+        </div>
+        <div class="card">
+          <h2>🎨 Visualisation</h2>
+          <p>Création de visualisations percutantes avec Excel, R, Python (Matplotlib, Seaborn) et Power BI.</p>
+        </div>
+        <div class="card">
+          <h2>🤖 Machine Learning</h2>
+          <p>Modélisation prédictive avec régression linéaire, régression logistique et autres algorithmes ML.</p>
+        </div>
+        <div class="card">
+          <h2>💻 Programmation & No Code</h2>
+          <p>Python, R, SQL et développement d’applications interactives avec Streamlit et outils No Code.</p>
+        </div>
+        <div class="card">
+          <h2>🛠 Outils & Méthodes</h2>
+          <p>Gestion de projets Data, préparation de données, analyse exploratoire et modélisation statistique.</p>
+        </div>
+        <div class="card">
+          <h2>📊 Business Insights</h2>
+          <p>Capacité à transformer les données en décisions stratégiques et recommandations actionnables.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Jasmiine Daniella ORSIMANDJI | Portfolio Data Analyst - 💻 Powered by Data & Innovation</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/jasmine-daniella-orsimandji-koboue-2127662a7" target="_blank">
+        <img src="images/link.png" alt="LinkedIn">
+      </a>
+      <a href="mailto:votre.kobouejasmine@gmail.com">
+        <img src="images/email.png" alt="Email">
+      </a>
+    </div>
+  </footer>
+
+  <!-- Script Canvas -->
+  <script>
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+    const particleCount = 150;
+
+    for(let i=0;i<particleCount;i++){
+      particles.push({
+        x: Math.random()*canvas.width,
+        y: Math.random()*canvas.height,
+        radius: Math.random()*3+1,
+        dx:(Math.random()-0.5)*1.5,
+        dy:(Math.random()-0.5)*1.5
+      });
+    }
+
+    function animate(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+
+      for(let i=0;i<particles.length;i++){
+        let p = particles[i];
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.radius,0,Math.PI*2);
+        ctx.fillStyle='rgba(0,255,255,0.7)';
+        ctx.fill();
+
+        for(let j=i+1;j<particles.length;j++){
+          let p2 = particles[j];
+          let dist = Math.hypot(p.x-p2.x, p.y-p2.y);
+          if(dist<120){
+            ctx.beginPath();
+            ctx.moveTo(p.x,p.y);
+            ctx.lineTo(p2.x,p2.y);
+            ctx.strokeStyle = `rgba(0,255,255,${1-dist/120})`;
+            ctx.lineWidth=1;
+            ctx.stroke();
+          }
+        }
+
+        p.x+=p.dx; p.y+=p.dy;
+        if(p.x<0||p.x>canvas.width)p.dx*=-1;
+        if(p.y<0||p.y>canvas.height)p.dy*=-1;
+      }
+
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    window.addEventListener('resize',()=>{
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Certificats</title>
+  <style>
+    /* --- Reset --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #e0e0e0;
+      background: #1a1a1a;
+      overflow-x: hidden;
+    }
+
+    /* --- Canvas arrière-plan --- */
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: #000;
+    }
+
+    /* --- Entête --- */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      color: turquoise;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: turquoise;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #007bff; /* bleu au survol */
+    }
+
+    /* --- Section certificats --- */
+    #certificats {
+      padding: 120px 10% 80px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: turquoise;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .certificats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .certificat-card {
+      background: rgba(0, 0, 0, 0.85);
+      border: 2px solid turquoise;
+      border-radius: 20px;
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .certificat-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #444;
+    }
+
+    .certificat-card h3 {
+      color: turquoise;
+      margin-bottom: 8px;
+      font-size: 1.3rem;
+    }
+
+    .certificat-card p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .certificat-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(64, 224, 208, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <!-- Canvas arrière-plan -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- En-tête -->
+  <header>
+    <h1>Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="visualisations.html">Visualisation</a></li>
+        <li><a href="certificats.html">Certificats</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SECTION CERTIFICATS -->
+  <section id="certificats">
+    <h2 class="section-title">📜 Mes Certificats</h2>
+    
+    <div class="certificats-container">
+      <div class="certificat-card">
+        <a href="images/CODIG.png" target="_blank">
+          <img src="images/CODIG.png" alt="Certificat Coding- HTML">
+        </a>
+        <h3>Coding- HTML</h3>
+        <p>sheisthecode à ABIDJAN| 2024</p>
+      </div>
+
+      <div class="certificat-card">
+        <a href="images/CERTI 2.png" target="_blank">
+          <img src="images/CERTI 2.png" alt="Certificat Communications professionnelles">
+        </a>
+        <h3>Communications professionnelles</h3>
+        <p>HP Foundation | 2024 </p>
+      </div>
+
+      <div class="certificat-card">
+        <a href="images/CERTI 1.png" target="_blank">
+          <img src="images/CERTI 1.png" alt="Certificat Les e-mails professionnels">
+        </a>
+        <h3>Les e-mails professionnels</h3>
+        <p>HP Foundation | 2024</p>
+      </div>
+
+      <div class="certificat-card">
+        <a href="images/certificat 1.png" target="_blank">
+          <img src="images/certificat 1.png" alt="Certificat Python">
+        </a>
+        <h3>Développement Numérique</h3>
+        <p>TOP INNOVATION |12juin 2024</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script animation canvas -->
+  <script>
+    const canvas = document.getElementById("bg-canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let points = [];
+    for (let i = 0; i < 60; i++) {
+      points.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.6,
+        vy: (Math.random() - 0.5) * 0.6
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "turquoise";
+      points.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      for (let i = 0; i < points.length; i++) {
+        for (let j = i + 1; j < points.length; j++) {
+          let dx = points[i].x - points[j].x;
+          let dy = points[i].y - points[j].y;
+          let dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            ctx.strokeStyle = "rgba(64,224,208,0.2)";
+            ctx.beginPath();
+            ctx.moveTo(points[i].x, points[i].y);
+            ctx.lineTo(points[j].x, points[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>

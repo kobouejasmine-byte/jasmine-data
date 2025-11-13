@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projets - Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  background: #2E2E2E; /* gris anthracite */
+}
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none; /* pour que les boutons soient cliquables */
+}
+header {
+  background: rgba(0,0,0,0.6);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+nav ul li a.active {
+  text-decoration: underline;
+}
+.projets {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 20px;
+  text-align: center;
+}
+.titre {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #4FC3F7;
+}
+/* Boutons filtres */
+.filters {
+  margin-bottom: 40px;
+}
+.filters button {
+  padding: 10px 20px;
+  margin: 5px;
+  background: #26A69A;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.filters button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(38,166,154,0.6);
+}
+/* Cadrans */
+.grid-projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+.card {
+  background: #3E3E3E;
+  color: #F5F5F5;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #4FC3F7;
+}
+.card p {
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+.card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #FFB74D;
+  color: black;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.card a:hover {
+  background: #e89b2f;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  background: rgba(0,0,0,0.6);
+}
+.social-icons img {
+  width: 28px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="projets.html" class="active">Projets</a></li>
+      <li><a href="visualisation.html">Visualisation</a></li>
+      <li><a href="certificats.html">Certificats</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="projets">
+  <h1 class="titre">Mes Projets</h1>
+
+  <div class="filters">
+    <button onclick="filterProjects('all')">Voir tous les projets</button>
+    <button onclick="filterProjects('pdf')">Rapports PDF</button>
+    <button onclick="filterProjects('ppt')">Présentations PowerPoint</button>
+    <button onclick="filterProjects('app')">Applications</button>
+  </div>
+
+  <div class="grid-projets">
+    <!-- Projet 1 PDF -->
+    <div class="card pdf">
+      <h2>STATISTIQUE DESCRIPTIVE</h2>
+      <p>ANALYSE STATISTIQUE DES FACTEURS
+DETERMINANT LE DEVELOPPEMENT GLOBAL DES
+
+PAYS.</p>
+      <a href="https://drive.google.com/file/d/1ocHd3W5tX6iKNpWSEc5m48krOMZrYXqp/view?usp=sharing" target="_blank">Consulter le fichier</a>
+    </div>
+    <!-- Projet 2 PDF -->
+    <div class="card pdf">
+  <h2>Modélisation des Risques Bancaires</h2>
+  <p>Application de techniques de Machine Learning pour prédire la probabilité de défaut.</p>
+  <a href="https://drive.google.com/file/d/1IAeDa44BSYXP6jncHSz_UioYICqoYdl3/view?usp=sharing" target="_blank">Consulter le fichier</a>
+</div>
+
+    <!-- Projet 3 PDF -->
+    <div class="card pdf">
+      <h2>Analyse Assurance Auto</h2>
+      <p>Étude de la fréquence et du coût des sinistres sur un portefeuille automobile.</p>
+      <a href="https://drive.google.com/file/d/1bjIjdqaHRSPNCYB_g0rigJ6-xs2EOKes/view?usp=sharing" target="_blank">Consulter le fichier</a>
+</div>
+    <!-- Projet 4 PowerPoint -->
+    <div class="card ppt">
+      <h2>Gestion du risque de crédit</h2>
+      <p>Modélisation de l’exposition en cas de défaut (EAD) via le facteur de conversion de crédit (CCF)</p>
+      <a href="https://docs.google.com/presentation/d/1zrT53SozYv0NkCja6z9Rg-Lg9oBC4LTr/edit?usp=sharing&ouid=106405306098865558385&rtpof=true&sd=true" target="_blank">Consulter le fichier</a>
+    </div>
+    <!-- Projet 5 PowerPoint -->
+    <div class="card ppt">
+      <h2>Modélisation des risques extrêmes</h2>
+      <p>Détermination du seuil entre sinistres attritionnels et sinistres graves par la méthode de Hill.</p>
+      <a href="https://docs.google.com/presentation/d/1N7yY38_zcHedmvj9BH0mR_ff00EIjwGb/edit?usp=sharing&ouid=106405306098865558385&rtpof=true&sd=true" target="_blank">Consulter le fichier</a>
+    </div>
+    
+    <!-- Projet 6 Application -->
+    <div class="card app">
+      <h2>Application credit Scoring</h2>
+      <p>Application R Shiny de Prédiction du risque de crédit par Machine Learning (projet en cours).</p>
+      <a href="https://ton-app2.com" target="_blank">Ouvrir l'application</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Jasmiine Daniella ORSIMANDJI | Portfolio Data Analyst - 💻 Powered by Data & Innovation</p>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/jasmine-daniella-orsimandji-koboue-2127662a7" target="_blank">
+      <img src="images/link.png" alt="LinkedIn">
+    </a>
+    <a href="mailto:votre.kobouejasmine@gmail.com">
+      <img src="images/email.png" alt="Email">
+    </a>
+  </div>
+</footer>
+
+<script>
+const canvas = document.getElementById('bg-canvas');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+let particles = [];
+const particleCount = 120;
+
+for (let i = 0; i < particleCount; i++) {
+  particles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    radius: Math.random() * 2 + 1.5,
+    dx: (Math.random() - 0.5) * 0.7,
+    dy: (Math.random() - 0.5) * 0.7
+  });
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < particles.length; i++) {
+    let p = particles[i];
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(79,195,247,0.4)';
+    ctx.fill();
+
+    for (let j = i + 1; j < particles.length; j++) {
+      let p2 = particles[j];
+      let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+      if (dist < 120) {
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.strokeStyle = 'rgba(79,195,247,' + (1 - dist / 120) * 0.3 + ')';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+    }
+
+    p.x += p.dx;
+    p.y += p.dy;
+    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+  }
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+// Filtrage des projets
+function filterProjects(type) {
+  let cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    if(type === 'all') { card.style.display = 'block'; } 
+    else { card.style.display = card.classList.contains(type) ? 'block' : 'none'; }
+  });
+}
+</script>
+
+</body>
+</html>

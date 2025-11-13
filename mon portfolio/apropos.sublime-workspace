@@ -1,0 +1,219 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"serv",
+				"Live Server: Open In Browser"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/INDEX1.HTML",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/css.html",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/style.css",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/contact.html",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/cv.html",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/certificats.html",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/visualisation.html",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/projets.html",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/apropos.html",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/script.js",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/index.html",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/images/certificat 1.png",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/documents/EXPOSE SURLES SINISTRE.pptx",
+		"/C/Users/RCK COMPUTERS/Desktop/mon portfolio/images/ma recherche perso photo.png",
+		"/C/Users/RCK COMPUTERS/Desktop/portfolio/index.html",
+		"/C/Users/RCK COMPUTERS/Desktop/portfolio/style.css",
+		"/C/Users/RCK COMPUTERS/Desktop/portfolio/contact.html",
+		"/C/Users/RCK COMPUTERS/Desktop/portfolio/projets.html",
+		"/C/Users/RCK COMPUTERS/Desktop/portfolio/about.html",
+		"/C/Users/RCK COMPUTERS/Desktop/portfolio/images/projet-powerbi.jpg",
+		"/C/Users/RCK COMPUTERS/Desktop/portfolio/images/projet-2.jpg.jpg",
+		"/C/Users/RCK COMPUTERS/Desktop/portfolio/images/projet-2.png",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/CSS.HTML",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/WhatsApp Image 2025-05-26 à 16.16.09_1d774a36.jpg",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/projet2.pdf",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/dashboard.pbix",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/portrait.jpg",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/projet-powerbi.jpg.png",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/INDEX.html",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/IMAGE DATA.jpg",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/banniere.jpg",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/data risk.jpg",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/WhatsApp Image 2025-08-21 à 19.58.37_52e2afc1.jpg",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/WhatsApp Image 2025-08-25 à 18.10.11_399d7c4d.jpg",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/SITE POUR FORMATION JEUNE FILLE.html",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/logo.jng",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/css.html",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/ACCEUIL",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/index.html",
+		"/C/Users/RCK COMPUTERS/Downloads/create-databases.sql",
+		"/C/Users/RCK COMPUTERS/Downloads/DS_Store",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/scripts.js",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/HTML/style.css",
+		"/C/Users/RCK COMPUTERS/Downloads/prevision_credit.pkl",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/WhatsApp Image 2024-12-07 à 12.17.11_ae7828cd.jpg",
+		"/C/Users/RCK COMPUTERS/Desktop/SITCP14/chemise/Untitled design (1).png",
+		"/C/Users/RCK COMPUTERS/AppData/Local/Temp/Rar$DIa2632.46647/TP1_SQL.sql",
+		"/C/Users/RCK COMPUTERS/AppData/Local/Temp/Rar$DIa18500.26201/TD3.sql",
+		"/C/Users/RCK COMPUTERS/AppData/Local/Temp/Rar$DIa18500.35740/TD3.sql"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "apropos.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

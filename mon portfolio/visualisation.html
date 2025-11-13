@@ -1,0 +1,230 @@
+<!-- Navigation (entête) -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="visualisations.html" class="active">Visualisation</a></li>
+      <li><a href="certificats.html">Certificats</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Section Visualisations -->
+<section class="visualisations">
+  <!-- Canvas arrière-plan -->
+  <canvas id="bg-canvas"></canvas>
+
+  <h2>📊 Mes Visualisations</h2>
+  <div class="grid">
+    <!-- Exemple Visuel 1 -->
+    <div class="card excel">
+      <img src="images/Vente et profil.png" alt="Visuel Excel 1">
+      <div class="card-content">
+        <h3>Analyse Excel - Ventes et Profil</h3>
+        <a href="documents/Sales and Profit Data.xlsx" download class="btn">Voir le fichier Excel</a>
+  </div>
+    </div>
+
+    <!-- Exemple Visuel 2 -->
+    <div class="card">
+      <img src="images/BORD1.jpg" alt="Visuel Excel 2">
+      <div class="card-content">
+        <h3>Analyse Excel - Performance( Travailen cours)</h3>
+        <a href="https://drive.google.com/ton_lien_excel2" target="_blank" class="btn">Voir le fichier</a>
+      </div>
+    </div>
+
+    <!-- Exemple Visuel 3 -->
+    <div class="card excel">
+      <img src="images/RH.png" alt="Visuel Excel 2">
+      <div class="card-content">
+  <h3>Visualisation des données RH – Effectif, Recrutement et Rentabilité</h3>
+  <a href="documents/tableau de bord RH.xlsx" download class="btn">Voir le fichier Excel</a>
+  </div>
+</div>
+
+    <!-- Exemple Visuel 4 -->
+    <div class="card">
+      <img src="images/powerbi1.png" alt="Visuel Power BI 1">
+      <div class="card-content">
+        <h3>Dashboard Power BI - SUIVI ET DE PILOTAGE DE PERFORMANCE</h3>
+        <a href="https://drive.google.com/file/d/1Os_VrOELE3tAIbBGUk2j6rPHnOzBFn_H/view?usp=sharing" target="_blank" class="btn">Voir le fichier</a>
+      </div>
+    </div>
+
+    <!-- Exemple Visuel 5 -->
+    <div class="card">
+      <img src="images/powerbi2.png" alt="Visuel Power BI 2">
+      <div class="card-content">
+        <h3>Power BI - Analyse des Probabilités de Défaut de Paiement</h3>
+        <a href="https://drive.google.com/file/d/1htS_4p2ybF4H14tMcHoKo6k2TScbOwoU/view?usp=sharing" target="_blank" class="btn">Voir le fichier</a>
+      </div>
+    </div>
+
+    <!-- Exemple Visuel 6 -->
+    <div class="card">
+      <img src="images/visuel_powerbi3.png" alt="Visuel Power BI 3">
+      <div class="card-content">
+        <h3>Tableau de bord d'analyse des ressources humaines</h3>
+        <a href="https://drive.google.com/file/d/1l1aIOH1XLPzFfnHUSu7soQooq3T_j_rL/view?usp=sharing" target="_blank" class="btn">Voir le fichier</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+/* ====== NAVIGATION ====== */
+header {
+  background: #111;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  color: #40E0D0; /* Vert turquoise */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: blue;
+}
+nav ul li a.active {
+  color: blue;
+}
+
+/* ====== SECTION VISUALISATIONS ====== */
+.visualisations {
+  position: relative;
+  padding: 50px;
+  background: #111;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+.visualisations h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #40E0D0; /* Turquoise */
+  position: relative;
+  z-index: 2;
+}
+
+/* Canvas points reliés */
+#bg-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Grille de cartes */
+.grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Style cartes */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 20px;
+}
+.card-content h3 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #111;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #40E0D0;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #008080;
+}
+</style>
+
+<script>
+// Canvas points reliés
+const canvas = document.getElementById("bg-canvas");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = document.querySelector(".visualisations").offsetHeight;
+
+let points = [];
+for (let i = 0; i < 50; i++) {
+  points.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    vx: (Math.random() - 0.5) * 0.5,
+    vy: (Math.random() - 0.5) * 0.5
+  });
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#40E0D0";
+  points.forEach(p => {
+    p.x += p.vx;
+    p.y += p.vy;
+    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+    ctx.fill();
+  });
+  for (let i = 0; i < points.length; i++) {
+    for (let j = i + 1; j < points.length; j++) {
+      let dx = points[i].x - points[j].x;
+      let dy = points[i].y - points[j].y;
+      let dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 120) {
+        ctx.strokeStyle = "rgba(64,224,208,0.3)";
+        ctx.beginPath();
+        ctx.moveTo(points[i].x, points[i].y);
+        ctx.lineTo(points[j].x, points[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(animate);
+}
+animate();
+</script>

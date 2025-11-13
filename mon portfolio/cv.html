@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon CV</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: #e0e0e0;
+      background: #1a1a1a;
+      overflow-x: hidden;
+    }
+
+    /* Canvas arrière-plan */
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* En-tête */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(0, 0, 0, 0.7);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header nav a {
+      color: #40E0D0; /* vert turquoise */
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #0099ff;
+    }
+
+    /* Bouton Télécharger */
+    .btn-download {
+      padding: 10px 20px;
+      background-color: #40E0D0;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-download:hover {
+      background-color: #0099ff;
+      color: white;
+    }
+
+    /* Section CV */
+    .cv-container {
+      max-width: 1100px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 10px;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .cv-header {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .cv-header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #40E0D0;
+    }
+
+    .cv-header h3 {
+      font-size: 1.2rem;
+      font-weight: normal;
+      margin-top: 10px;
+      color: #e0e0e0;
+    }
+
+    .left, .right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .photo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .photo img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #40E0D0;
+    }
+
+    h2, h3 {
+      color: #40E0D0;
+      margin-top: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .stars {
+      color: #40E0D0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Canvas en arrière-plan -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- En-tête -->
+  <header>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="cv.html">CV</a>
+    </nav>
+    <a href="CV_Jasmine.pdf" download class="btn-download">📄 Télécharger le CV en PDF</a>
+  </header>
+
+  <!-- CV -->
+  <section class="cv-container">
+    <!-- Bloc titre en haut -->
+    <div class="cv-header">
+      <h1>JASMINE DANIELLA KOBOUE ORSIMANDJI</h1>
+      <h3>Statisticienne | Data Analyste | Power BI • SQL • Excel</h3>
+    </div>
+
+    <!-- Colonne gauche -->
+    <div class="left">
+      <div class="photo">
+        <img src="images/photojas.png" alt="Photo de profil">
+      </div>
+
+      <h2>Contact</h2>
+      <p>📧 kobouejasmine@gmail.com</p>
+      <p>📞 002250758147309</p>
+
+      <h2>Formations</h2>
+      <p><b>Master en Data Science</b> (en cours) – INSSEDS</p>
+      <p><b>Licence Statistique-Économétrie</b> – INSSEDS (2024)</p>
+      <p><b>DEUG Math-Info</b> – Université FHB (2023)</p>
+      <p><b>Baccalauréat Série C</b> – 2017</p>
+
+      <h2>Compétences (Outils)</h2>
+      <p>Excel ★★★☆☆</p>
+      <p>RStudio ★★★★☆</p>
+      <p>Sublime Text ★★★☆☆</p>
+      <p>Google Sheets ★★★☆☆</p>
+      <p>Google Docs ★★★★☆</p>
+      <p>Google Forms ★★★☆☆</p>
+      <p>Power BI ★★★★☆</p>
+      <p>PowerPoint ★★★☆☆</p>
+      <p>PgAdmin4, DBeaver (SQL)</p>
+      <p>Python (Notebook)</p>
+
+      <h2>Langues</h2>
+      <p>Français : Courant</p>
+      <p>Anglais : Intermédiaire</p>
+    </div>
+
+    <!-- Colonne droite -->
+    <div class="right">
+      <h2>Profil</h2>
+      <p>Ingénieure statisticienne – Data Scientiste - Data Analyste, spécialisée en analyse de données et en modélisation.
+, je mets mes compétences en statistique, SQL, Excel et Power BI au service de la prise de décision et de la création de valeur pour les entreprise et les organisations.</p>
+
+      <h2>Compétences Techniques</h2>
+      <ul>
+        <li>Analyse et visualisation de données financières</li>
+        <li>Modélisation statistique (régression, scoring de risque)</li>
+        <li>SQL pour extraction et analyse de données</li>
+        <li>Excel avancé et Power BI pour reporting et dashboards</li>
+      </ul>
+
+      <h2>Projets Data</h2>
+      <p><b>📊 Dashboard interactif – Suivi de performance commerciale (2025)</b></p>
+      <ul>
+        <li>Intégration et modélisation de 7 tables relationnelles</li>
+        <li>Création de KPI métiers (rentabilité, portefeuille client)</li>
+        <li>Mise en place de filtres dynamiques sous Power BI</li>
+      </ul>
+
+      <p><b>📈 Analyse des données financières – Prévision dépôts à terme (2025)</b></p>
+      <ul>
+        <li>Préparation et nettoyage des données</li>
+        <li>Analyse exploratoire et modélisation prédictive</li>
+        <li>Résultats : recommandations pour optimiser les campagnes</li>
+      </ul>
+
+      <h2>Soft Skills</h2>
+      <ul>
+        <li>Rigueur et sens du détail</li>
+        <li>Esprit critique et analytique</li>
+        <li>Autonomie et organisation</li>
+        <li>Travail en équipe</li>
+      </ul>
+
+      <h2>Certificats</h2>
+      <p>Coding – SheIsTheCode (2024)</p>
+      <p>No Code – Digifemmes CI (2025)</p>
+    </div>
+  </section>
+
+  <!-- Script Canvas (Design data) -->
+  <script>
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+    const particleCount = 120;
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 3 + 1,
+        dx: (Math.random() - 0.5) * 1.5,
+        dy: (Math.random() - 0.5) * 1.5
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < particles.length; i++) {
+        let p = particles[i];
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(64,224,208,0.8)'; // turquoise
+        ctx.fill();
+
+        for (let j = i + 1; j < particles.length; j++) {
+          let p2 = particles[j];
+          let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.strokeStyle = `rgba(64,224,208,${1 - dist / 120})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+
+        p.x += p.dx;
+        p.y += p.dy;
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+      }
+
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>
